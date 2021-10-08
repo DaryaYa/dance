@@ -1,3 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a2a6d5d-fb54-4c4a-aa77-57efdace9c28/deploy-status)](https://app.netlify.com/sites/polina-tribal/deploys)
+
+
+
+
 # Webpack 5 Boilerplate Template
 
 ![Maintenance](https://img.shields.io/maintenance/yes/2021?logo=github)
