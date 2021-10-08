@@ -1,5 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: $black;
+    background: $background;
     color: $foreground-color;
     font-family: 'DINP-R', arial, serif;
     font-size: 1.3em;
@@ -13,7 +17,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.1;
     // padding: 60px 30px 30px;
     //background-size: 160px;
     width: 100%;
@@ -70,145 +74,274 @@ body {
     }
 }
 
+.arrow-down {
+    position: absolute;
+    left: calc(50% - 64px);
+    bottom: 4%;
+    animation: updown 2s infinite alternate;
+}
+
+@keyframes updown {
+    to {
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+        // transform: scale(1.5);
+    }
+}
+
+@keyframes picture {
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
 main {
-    background: $foreground-color;
-    color: $black;
-    margin: 20px auto;
-    padding: 40px;
-    width: 90%;
-    h1 {
-        font-size: 2em;
-        font-weight: bold;
-        padding: 20px;
-        text-align: center;
-    }
-    h2 {
-        font-weight: bold;
-        font-size: 1.5em;
-        text-align: center;
-        padding: 20px;
-    }
-    h3 {
-        font-weight: bold;
-        text-align: center;
-        padding: 10px;
-    }
+    background: $background;
+    color: $light-gray;
+    // margin: 20px auto;
+    // padding: 40px;
+    width: 100%;
 }
 
-.badges {
-    line-height: .5em;
-    img {
-        display: inline;
-    }
-    h6 {
-        font-size: .5em;
-    }
-}
-
-a {
-    color: $link-color;
-    &:hover {
-        color: $black;
-    }
-}
-
-address {
-    color: $accent-color;
-}
-
-pre {
-    margin: 10px;
-    padding: 20px;
-    code {
-        display: block;
-        background: $body-background-color;
-        color: $white;
-        padding: 10px;
-        border-left: 6px solid $link-color;
-    }
-}
-
-.logo {
-    margin: 0 auto;
-    display: block;
-}
-
-ul {
-    list-style-type: square;
-    list-style-position: inside;
-}
-
-ol {
-    list-style-type: decimal;
-    list-style-position: inside;
-}
-
-ul ul,
-ol ul {
-    list-style-type: circle;
-    list-style-position: inside;
-    margin-left: 15px;
-}
-
-ol ol,
-ul ol {
-    list-style-type: lower-latin;
-    list-style-position: inside;
-    margin-left: 15px;
-}
-
-blockquote {
-    background: $light-gray;
-    border-left: 4px solid $link-color;
-    border-radius: 3px;
-    margin: 10px 0;
-    padding: 10px 10px 10px 20px;
-}
-
-code {
-    font-family: Consolas, 'courier new';
-    color: $link-color;
-    background-color: $light-gray;
-    padding: 2px;
-    font-size: 1em;
-    border-radius: 3px;
-}
-
-footer {
+h2 {
     text-align: center;
-    padding-bottom: 20px;
-    a:hover {
+    text-transform: capitalize;
+    font-size: xxx-large;
+    font-weight: bold;
+    margin: 40px auto 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: $background;
+}
+
+.container-video,
+.container-intro,
+.container-adv,
+.container-psycho,
+.containet-rythm,
+.container-cult,
+.container-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+// .container-intro {
+//     display: flex;
+//     justify-content: space-between; 
+// }
+.pic {
+    width: 560px;
+    background-size: cover;
+    border-radius: 10px;
+    &:hover {
+        animation: picture 2s infinite alternate;
+        opacity: 0.7;
+    }
+}
+
+.video-pic {
+    background: $light-gray url(../images/content/fcbd300x300.png) center no-repeat;
+    height: 315px;
+    background-size: content;
+}
+
+.intro-text {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 560px;
+    text-align: justify;
+    color: $accent-color;
+    border: 1px dotted $accent-color;
+    border-radius: 10px;
+    padding: 10px;
+    h4 {
+        font-size: 25px;
+        font-weight: bold;
         color: $white;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 15px;
     }
 }
 
-.github-corner:hover {
-    .octo-arm {
-        animation: octocat-wave 560ms ease-in-out;
-    }
+.intro-pic {
+    background: $background url(../images/content/intro.jpg) center no-repeat;
+    background-size: cover;
 }
 
-@keyframes octocat-wave {
-    0% {
-        transform: rotate(0deg);
-    }
-    20% {
-        transform: rotate(-25deg);
-    }
-    40% {
-        transform: rotate(10deg);
-    }
-    60% {
-        transform: rotate(-25deg);
-    }
-    80% {
-        transform: rotate(10deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+.adv-pic {
+    background: $background url(../images/content/adv.jpg) center no-repeat;
+    background-size: cover;
 }
 
+.psycho-pic {
+    background: $background url(../images/content/psycho.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.rythm-pic {
+    background: $background url(../images/content/bg-main.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.cult-pic {
+    background: $background url(../images/content/cult.jpg) no-repeat;
+    background-position: center 25%;
+    background-size: cover;
+}
+
+.group-pic {
+    background: $background url(../images/content/pic2.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.eng {
+    text-align: center;
+    max-width: 560px;
+    margin: 10px auto 20px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.advantage-container {
+    background-color: $light-gray;
+    color: $background;
+    border-radius: 10px;
+    padding: 10px 0 20px;
+    margin: 20px 0;
+}
+
+.advantage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.advantage-detail {
+    display: flex;
+    width: 46%;
+    max-width: 560px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.advantage__pic {
+    width: 45px;
+    margin-right: 1em;
+}
+
+.advantage__title {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// .badges {
+//     line-height: .5em;
+//     img {
+//         display: inline;
+//     }
+//     h6 {
+//         font-size: .5em;
+//     }
+// }
+// a {
+//     color: $link-color;
+//     &:hover {
+//         color: $black;
+//     }
+// }
+// address {
+//     color: $accent-color;
+// }
+// pre {
+//     margin: 10px;
+//     padding: 20px;
+//     code {
+//         display: block;
+//         background: $body-background-color;
+//         color: $white;
+//         padding: 10px;
+//         border-left: 6px solid $link-color;
+//     }
+// }
+// .logo {
+//     margin: 0 auto;
+//     display: block;
+// }
+// ul {
+//     list-style-type: square;
+//     list-style-position: inside;
+// }
+// ol {
+//     list-style-type: decimal;
+//     list-style-position: inside;
+// }
+// ul ul,
+// ol ul {
+//     list-style-type: circle;
+//     list-style-position: inside;
+//     margin-left: 15px;
+// }
+// ol ol,
+// ul ol {
+//     list-style-type: lower-latin;
+//     list-style-position: inside;
+//     margin-left: 15px;
+// }
+// blockquote {
+//     background: $light-gray;
+//     border-left: 4px solid $link-color;
+//     border-radius: 3px;
+//     margin: 10px 0;
+//     padding: 10px 10px 10px 20px;
+// }
+// code {
+//     font-family: Consolas, 'courier new';
+//     color: $link-color;
+//     background-color: $light-gray;
+//     padding: 2px;
+//     font-size: 1em;
+//     border-radius: 3px;
+// }
+// footer {
+//     text-align: center;
+//     padding-bottom: 20px;
+//     a:hover {
+//         color: $white;
+//     }
+// }
+// .github-corner:hover {
+//     .octo-arm {
+//         animation: octocat-wave 560ms ease-in-out;
+//     }
+// }
+// @keyframes octocat-wave {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+//     20% {
+//         transform: rotate(-25deg);
+//     }
+//     40% {
+//         transform: rotate(10deg);
+//     }
+//     60% {
+//         transform: rotate(-25deg);
+//     }
+//     80% {
+//         transform: rotate(10deg);
+//     }
+//     100% {
+//         transform: rotate(0deg);
+//     }
+// }
 @media (max-width: 500px) {
     .github-corner {
         &:hover {
