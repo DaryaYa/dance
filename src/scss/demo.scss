@@ -57,6 +57,7 @@ body {
 
 .m-bott {
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .btn-main {
@@ -96,6 +97,13 @@ body {
     }
 }
 
+@keyframes picture1 {
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(.9);
+    }
+}
+
 main {
     background: $background;
     color: $light-gray;
@@ -116,18 +124,20 @@ h2 {
     max-width: 1200px;
     margin: 20px auto;
     background-color: $background;
+    flex-wrap: wrap;
 }
 
 .container-video,
 .container-intro,
 .container-adv,
 .container-psycho,
-.containet-rythm,
+.container-rythm,
 .container-cult,
 .container-group {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 // .container-intro {
@@ -186,7 +196,7 @@ h2 {
 }
 
 .rythm-pic {
-    background: $background url(../images/content/bg-main.jpg) center no-repeat;
+    background: $background url(../images/content/pic5.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -417,26 +427,30 @@ h3 {
 //         transform: rotate(0deg);
 //     }
 // }
-@media (max-width: 500px) {
-    .github-corner {
-        &:hover {
-            .octo-arm {
-                animation: none;
-            }
-        }
-        .octo-arm {
-            animation: octocat-wave 560ms ease-in-out;
-        }
-    }
-}
-
+// @media (max-width: 500px) {
+//     .github-corner {
+//         &:hover {
+//             .octo-arm {
+//                 animation: none;
+//             }
+//         }
+//         .octo-arm {
+//             animation: octocat-wave 560ms ease-in-out;
+//         }
+//     }
+// }
 // @media only screen and (min-width: 1024px) {
 //     header,
 //     main {
 //         width: 60%;
 //     }
 // }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) {
+    .header__title {
+        font-size: 1.8em;
+        left: auto;
+        width: 100%;
+    }
     main {
         h1 {
             font-size: 1.3em;
@@ -444,5 +458,92 @@ h3 {
         h2 {
             font-size: 1.1em;
         }
+    }
+    .pic {
+        width: 48%;
+        &:hover {
+            animation: picture1 2s infinite alternate;
+            opacity: 0.7;
+        }
+    }
+    .intro-text {
+        width: 48%;
+    }
+    .container-video {
+        iframe {
+            width: 48%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__title {
+        width: 100%;
+    }
+    .arrow-down {
+        left: calc(50% - 25px);
+        height: 50px;
+    }
+    .contacts {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container-video {
+        iframe {
+            width: 95%;
+        }
+    }
+    .header__title {
+        top: 12%;
+    }
+    .container-video,
+    .container-intro,
+    .container-adv,
+    .container-psycho,
+    .container-rythm,
+    .container-cult,
+    .container-group {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+    .pic {
+        width: 95%;
+        height: 300px;
+        margin: 10px 0;
+    }
+    .intro-text {
+        width: 95%;
+    }
+    .advantage {
+        flex-direction: column;
+        align-items: center;
+    }
+    .advantage-detail {
+        width: 98%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .advantage__pic {
+        width: auto;
+        margin-right: 0;
+        img {
+            width: 25px;
+        }
+    }
+    .adv-pic,
+    .rythm-pic {
+        order: 2;
+    }
+    .advantage-text {
+        text-align: center;
+    }
+    .contacts-map {
+        width: 95%;
+        height: 18em;
     }
 }
