@@ -72,7 +72,8 @@ iframe {
 
 .arrow-down {
     position: absolute;
-    left: calc(50% - 64px);
+    height: 80px;
+    left: calc(50% - 40px);
     bottom: 4%;
     animation: updown 2s infinite alternate;
 }
@@ -134,6 +135,22 @@ h2 {
     justify-content: space-between;
     margin-top: 30px;
     flex-wrap: wrap;
+}
+
+.quote {
+    color: $accent-color;
+    border: 1px dotted $accent-color;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+q {
+    width: 70%;
+    display: block;
+    text-align: center;
+    margin: auto;
+    line-height: 2.5em;
 }
 
 cite {
