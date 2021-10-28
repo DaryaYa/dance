@@ -1,4 +1,33 @@
 import '../scss/app.scss';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
+// Swiper.use([Navigation, Pagination]);
+
+const swiper = new Swiper('.mySwiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  speed: 400,
+  // hashNavigation: {
+  //   watchState: true,
+  // },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 5000,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 const $ = require('jquery');
 
