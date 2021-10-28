@@ -432,7 +432,7 @@
     }
     
     .icons {
-        margin: 10px 0 0 1em;
+        margin: 10px 0 10px 1em;
     }
     
     .copyright {
@@ -494,6 +494,9 @@
     }
     
     @media only screen and (max-width: 650px) {
+        h3 {
+            font-size: 1.2em;
+        }
         .container-video {
             iframe {
                 width: 95%;
@@ -546,6 +549,10 @@
         .advantage-text {
             text-align: center;
         }
+        .slider-text {
+            overflow: auto;
+            width: 80%;
+        }
         .promo-video {
             iframe {
                 height: 300px;
@@ -554,5 +561,11 @@
         .contacts-map {
             width: 95%;
             height: 18em;
+        }
+        .footer {
+            flex-direction: column;
+        }
+        .my-gh img {
+            height: 25px;
         }
     }
