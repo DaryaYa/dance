@@ -8,6 +8,7 @@
     <meta name="keywords" content="webpack, webpack-configuration, template, boilerplate, setup, html, css, sass, javascript">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Plamen Nikolov, WeAreAthlon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                 <p>Минск</p>
             </div>
             <div>
-                <a href="#contacts"><button class="btn-main">Записаться на занятие</button></a>
+                <a href="#enroll"><button class="btn-main">Записаться на занятие</button></a>
             </div>
         </div>
         <div>
@@ -41,11 +42,14 @@
             <div class="container-intro">
                 <div class="intro-text">
                     <h4>Танец для любого человека</h4>
-                    <p>ATS® сформировался из проб и ошибок танцоров всего мира на протяжении нескольких десятков лет.</p>
+                    <p>ATS® сформировался из проб и ошибок танцоров всего мира на протяжении нескольких десятков лет.
+                    </p>
                     <p>Остались только самые удобные и простые движения.</p>
                     <p>Я объясняю подробно, использую международную методику преподавания.</p>
-                    <p>Мы записываем теорию в тетрадь, рисуем схемы. Так что вы всегда сможете повторить материал дома.</p>
-                    <p>Можно заниматься с любой комплекцией и в любом возрасте. Каждый делает столько, сколько ему комфортно.</p>
+                    <p>Мы записываем теорию в тетрадь, рисуем схемы. Так что вы всегда сможете повторить материал дома.
+                    </p>
+                    <p>Можно заниматься с любой комплекцией и в любом возрасте. Каждый делает столько, сколько ему комфортно.
+                    </p>
                     <p>Присоединиться в группу можно в любой момент.</p>
                 </div>
                 <div class="pic intro-pic"></div>
@@ -78,7 +82,8 @@
                     <p>Движения трайбл взяты из танцев Азии, Африки и Европы.</p>
                     <p>Мы собираем этнические элементы костюма из разных стран.</p>
                     <p>Танцуем под музыку народов мира, слушаем новые необычные ритмы и инструменты.</p>
-                    <p>Трайбл дает возможность вспомнить свои корни и ощутить единение и общение с другими танцорами без слов.</p>
+                    <p>Трайбл дает возможность вспомнить свои корни и ощутить единение и общение с другими танцорами без слов.
+                    </p>
                     <p>Слово tribal переводится как "племенной".</p>
 
                 </div>
@@ -100,7 +105,8 @@
                 <div class="intro-text">
                     <h4>Единственная в Беларуси сертификация</h4>
                     <p>В 2016-м году я получила международную сертификацию по ATS® (трайбл) и звание FCBD® Sister-Studio. Такая сертификация одна в Беларуси.</p>
-                    <p>Сертификат возлагает на меня ответственность преподавать и транслировать ATS® по международному стандарту.</p>
+                    <p>Сертификат возлагает на меня ответственность преподавать и транслировать ATS® по международному стандарту.
+                    </p>
                     <p>ATS® (трайбл) - это международный танец.</p>
                     <p>Когда вы узнаете основы движений, то сможете импровизировать без подготовки с любым человеком, который тоже изучает трайбл.</p>
                     <p>Но для этого необходимо знать азбуку движений корректно, так как ее преподает создатель стиля Каролина Нериккио-Болман.</p>
@@ -108,7 +114,8 @@
             </div>
             <div class="quote">
                 <q>
-                Мы боимся довериться собственным крыльям. Мы холим и лелеем их, но не доверяем им свою жизнь. Мы слишком часто падали с насеста.</q>
+                    Мы боимся довериться собственным крыльям. Мы холим и лелеем их, но не доверяем им свою жизнь. Мы
+                    слишком часто падали с насеста.</q>
                 <cite>— Чарльз Б. Ньюкомб</cite>
             </div>
 
@@ -174,6 +181,32 @@
             <div class="promo-video">
                 <h3>Давай позанимаемся прямо сейчас</h3>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/GT9nsDrr20k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="enroll">
+                <h2 id="enroll">Записаться</h2>
+                <p class="eng">Мы свяжемся с вами</p>
+                <form>
+
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="Tribal Belarus">
+                    <input type="hidden" name="admin_email" value="polina@tribal.by">
+                    <input type="hidden" name="form_subject" value="Form Subject">
+                    <!-- END Hidden Required Fields -->
+
+                    <div class="form-group">
+                        <input type="text" name="Name" placeholder="You name..." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="E-mail" placeholder="You E-mail..." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Phone" placeholder="You phone...">
+                    </div>
+
+                    <!-- <button>Send</button> -->
+                    <button type="submit" class="btn btn-main">Отправить форму</button>
+                </form>
+                <p class="small">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</p>
             </div>
             <!-- <div class="enroll">
                 <h2 id="enroll">Записаться</h2>
