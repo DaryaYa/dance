@@ -70,9 +70,71 @@
         }
     }
     
+    @keyframes swing {
+        10% {
+            transform: rotate(20deg);
+        }
+        20% {
+            transform: rotate(-15deg);
+        }
+        30% {
+            transform: rotate(10deg);
+        }
+        40% {
+            transform: rotate(-5deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        60% {
+            transform: rotate(-10deg);
+        }
+        70% {
+            transform: rotate(10deg);
+        }
+        80% {
+            transform: rotate(-5deg);
+        }
+        90% {
+            transform: rotate(10deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    .btn-try {
+        position: fixed;
+        top: 3%;
+        right: 5%;
+        z-index: 3;
+        background-color: $teaser;
+        color: $body-background-color;
+        border-radius: 50%;
+        font-size: xx-large;
+        font-weight: bold;
+        border: none;
+        padding: 25px;
+        animation: swing ease-in-out 20s alternate;
+        transform-origin: center -20px;
+        transition: transform 250ms;
+        &:hover {
+            cursor: pointer;
+            color: $caption-color;
+            background-color: $teaser-bg;
+            transform: scale(1.1);
+            animation: swing ease-in-out 8s alternate;
+            // transform-origin: center -20px;
+        }
+    }
+    
     .arrow-down {
         position: absolute;
         height: 80px;
+        opacity: .5;
+    }
+    
+    .down {
         left: calc(50% - 40px);
         bottom: 4%;
         animation: updown 2s infinite alternate;
@@ -413,7 +475,29 @@
         }
     }
     
+    @keyframes up {
+        to {
+            -webkit-transform: translateY(40px) rotate(180deg);
+            transform: translateY(40px) rotate(180deg);
+        }
+    }
+    
+    .up {
+        display: none;
+        overflow: hidden;
+        position: fixed;
+        z-index: 3;
+        transform: rotate(180deg);
+        bottom: 40px;
+        animation: up 2s infinite alternate;
+    }
+    
+    .footer-arrow {
+        position: relative;
+    }
+    
     .footer {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -479,8 +563,14 @@
             width: 100%;
         }
         .arrow-down {
-            left: calc(50% - 25px);
             height: 50px;
+        }
+        .down {
+            left: calc(50% - 25px);
+        }
+        .btn-try {
+            padding: 15px;
+            font-size: medium;
         }
         .contacts {
             flex-wrap: wrap;
